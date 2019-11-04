@@ -3,9 +3,7 @@ import Flat from './flat';
 
 const List = ({ flats }) => {
   return (
-    <div className="flat-list">
-      {flats.map(flat => <Flat name={flat.name} imageUrl={flat.imageUrl} price={flat.price} />) }
-    </div>
+      flats.map(flat => <Flat name={flat.name} imageUrl={flat.imageUrl} price={flat.price} />)
   );
 };
 

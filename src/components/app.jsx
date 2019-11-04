@@ -6,11 +6,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="left-scene">
-          <h1>left</h1>
+        <div className="flat-list">
           <List flats={flats} />
         </div>
-        <div className="right-scene">
+        <div className="map-container">
           <h1>right</h1>
         </div>
       </div>
