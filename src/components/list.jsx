@@ -1,9 +1,21 @@
 import React from 'react';
 import Flat from './flat';
 
-const List = ({ flats }) => {
+const List = ({ flats, updateMarker }) => {
   return (
-    flats.map(flat => <Flat name={flat.name} imageUrl={flat.imageUrl} price={flat.price} />)
+    flats.map((flat) => {
+      return (
+        <Flat
+        name={flat.name}
+        imageUrl={flat.imageUrl}
+        price={flat.price}
+        lat={flat.lat}
+        long={flat.lng}
+        updateMarker={updateMarker}
+        />
+      );
+    }
+    )
   );
 };
 

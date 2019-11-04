@@ -11,11 +11,18 @@ class App extends Component {
     };
   }
 
+  updateMarker = (lat, long) => {
+    this.setState({ selectedFlat: { lat: lat, long: long } });
+  }
+
   render() {
     return (
       <div>
         <div className="flat-list">
-          <List flats={flats} />
+          <List
+          flats={flats}
+          updateMarker={this.updateMarker}
+          />
         </div>
         <div className="map-container">
           <SimpleMap selectedFlat={this.state.selectedFlat} />
