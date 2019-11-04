@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import flats from '../../data/flats';
 import List from './list';
+import SimpleMap from './map';
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
           <List flats={flats} />
         </div>
         <div className="map-container">
-          <h1>right</h1>
+          < SimpleMap />
         </div>
       </div>
     );
