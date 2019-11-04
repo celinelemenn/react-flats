@@ -7,25 +7,33 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedFlat: { lat: 59.955413, long: 30.337844 }
+      selectedFlat: { lat: 59.955413, long: 30.337844 },
+      mapCenter: { lat: 59.95, lng: 30.33 }
     };
   }
 
   updateMarker = (lat, long) => {
-    this.setState({ selectedFlat: { lat: lat, long: long } });
+    this.setState({
+      selectedFlat: { lat: lat, long: long },
+      mapCenter: { lat: lat, long: long }
+    });
   }
+
 
   render() {
     return (
       <div>
         <div className="flat-list">
           <List
-          flats={flats}
-          updateMarker={this.updateMarker}
+            flats={flats}
+            updateMarker={this.updateMarker}
           />
         </div>
         <div className="map-container">
-          <SimpleMap selectedFlat={this.state.selectedFlat} />
+          <SimpleMap
+            selectedFlat={this.state.selectedFlat}
+            mapCenter={this.state.mapCenter}
+          />
         </div>
       </div>
     );

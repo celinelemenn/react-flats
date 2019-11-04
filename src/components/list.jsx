@@ -6,12 +6,13 @@ const List = ({ flats, updateMarker }) => {
     flats.map((flat) => {
       return (
         <Flat
-        name={flat.name}
-        imageUrl={flat.imageUrl}
-        price={flat.price}
-        lat={flat.lat}
-        long={flat.lng}
-        updateMarker={updateMarker}
+          name={flat.name}
+          imageUrl={flat.imageUrl}
+          key={flat.name}
+          price={flat.price}
+          lat={flat.lat}
+          long={flat.lng}
+          updateMarker={updateMarker}
         />
       );
     }
