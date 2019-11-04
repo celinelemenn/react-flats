@@ -4,6 +4,13 @@ import List from './list';
 import SimpleMap from './map';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedFlat: { lat: 59.955413, long: 30.337844 }
+    };
+  }
+
   render() {
     return (
       <div>
@@ -11,7 +18,7 @@ class App extends Component {
           <List flats={flats} />
         </div>
         <div className="map-container">
-          < SimpleMap />
+          <SimpleMap selectedFlat={this.state.selectedFlat} />
         </div>
       </div>
     );

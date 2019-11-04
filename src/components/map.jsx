@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './marker';
-// const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -12,7 +12,14 @@ class SimpleMap extends Component {
     zoom: 11
   };
 
+
+  // constructor(props) {
+  //   super(props);
+  //   console.log(this.props.selectedFlat)
+  // }
+
   render() {
+
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
@@ -22,9 +29,9 @@ class SimpleMap extends Component {
           defaultZoom={this.props.zoom}
         >
           <Marker
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
+            lat={this.props.selectedFlat.lat}
+            lng={this.props.selectedFlat.long}
+            // text="HERE"
           />
         </GoogleMapReact>
       </div>

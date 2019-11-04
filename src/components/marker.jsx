@@ -1,10 +1,8 @@
 import React from 'react';
 
-const Marker = (props) => {
+const Marker = () => {
   return (
-    <div className="marker">
-      {props.text}
-    </div>
+    <div className="marker"></div>
   );
 };
 
