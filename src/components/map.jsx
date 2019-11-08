@@ -4,10 +4,9 @@ import Marker from './marker';
 
 
 const SimpleMap = (props) => {
-
   return (
     // Important! Always set the container height explicitly
-    <div className="map-container" >
+    <div className="map-container">
       <GoogleMapReact
         // bootstrapURLKeys={{ key: /* YOUR KEY HERE */ }}
         defaultCenter={props.mapCenter}
@@ -21,6 +20,6 @@ const SimpleMap = (props) => {
       </GoogleMapReact>
     </div>
   );
-}
+};
 
 export default SimpleMap;
