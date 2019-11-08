@@ -3,18 +3,19 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './marker';
 
 
-const SimpleMap = (props) => {
+const SimpleMap = ({ mapCenter, selectedFlat }) => {
+  console.log(mapCenter);
   return (
     // Important! Always set the container height explicitly
     <div className="map-container">
       <GoogleMapReact
         // bootstrapURLKeys={{ key: /* YOUR KEY HERE */ }}
-        defaultCenter={props.mapCenter}
+        defaultCenter={mapCenter}
         defaultZoom={11}
       >
         <Marker
-          lat={props.selectedFlat.lat}
-          lng={props.selectedFlat.long}
+          lat={selectedFlat.lat}
+          lng={selectedFlat.long}
           // text="HERE"
         />
       </GoogleMapReact>
