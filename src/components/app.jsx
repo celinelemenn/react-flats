@@ -23,18 +23,16 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="flat-list">
-          <List
-            flats={flats}
-            updateMarker={this.updateMarker}
-          />
-        </div>
-        <div className="map-container">
+        <List
+          flats={flats}
+          updateMarker={this.updateMarker}
+        />
+
           <SimpleMap
             selectedFlat={this.state.selectedFlat}
             mapCenter={this.state.mapCenter}
           />
-        </div>
+
       </div>
     );
   }

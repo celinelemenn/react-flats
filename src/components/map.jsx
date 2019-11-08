@@ -7,7 +7,7 @@ const SimpleMap = (props) => {
 
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div className="map-container" >
       <GoogleMapReact
         // bootstrapURLKeys={{ key: /* YOUR KEY HERE */ }}
         defaultCenter={props.mapCenter}
