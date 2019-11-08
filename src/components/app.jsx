@@ -27,12 +27,10 @@ class App extends Component {
           flats={flats}
           updateMarker={this.updateMarker}
         />
-
-          <SimpleMap
-            selectedFlat={this.state.selectedFlat}
-            mapCenter={this.state.mapCenter}
-          />
-
+        <SimpleMap
+          selectedFlat={this.state.selectedFlat}
+          mapCenter={this.state.mapCenter}
+        />
       </div>
     );
   }
