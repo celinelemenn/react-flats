@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import GoogleMapReact from 'google-map-react';
 
-import Marker from '../components/marker';
+// import Marker from '../components/marker';
 
 // const SimpleMap = ({ mapCenter, selectedFlat }) => {
 
 const SimpleMap = ({ selectedFlat }) => {
-  let marker = undefined ;
+  let marker = null;
   let center = { lat: 48.856614, lng: 2.352222 };
 
   if (selectedFlat !== null) {
@@ -15,12 +15,14 @@ const SimpleMap = ({ selectedFlat }) => {
       lat: selectedFlat.lat,
       lng: selectedFlat.lng
     };
-    marker = {
-      lat: selectedFlat.lat,
-      lng: selectedFlat.lng
-    };
+    marker = (
+      <div
+        className="marker"
+        lat={selectedFlat.lat}
+        lng={selectedFlat.lng}
+      />
+    );
   }
-
   return (
     <div className="map-container">
       <GoogleMapReact
@@ -28,11 +30,7 @@ const SimpleMap = ({ selectedFlat }) => {
         center={center}
         defaultZoom={11}
       >
-         <Marker
-          // lat={marker.lat}
-          // lng={marker.lng}
-          // text="HERE"
-        />
+        { marker }
 
       </GoogleMapReact>
     </div>
