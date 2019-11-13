@@ -1,30 +1,11 @@
-# react-boilerplate
 
-Simple react starter with the following config:
 
-- React, ReactDOM
-- Webpack 4
-- Babel with es2015 and react presets
-- Bootstrap (css only, loaded from a cdn in `index.html`)
-- work with `.js` or `.jsx` files
-- main `application.scss` stylesheet is imported in `index.js` as a module to enjoy hot reloading
+![alt text](https://res.cloudinary.com/dwkwy2q1n/image/upload/v1573639151/flats.png)
 
-## Scripts
 
-To start the local Webpack Dev Server (usually on port `8080`):
+## What is it ?
+- list of apartment
 
-```bash
-yarn start
-```
+## What technology stacks ?
+- The front end React and Redux
 
-To lint all JavaScript files in the `src` folder:
-
-```bash
-yarn lint
-```
-
-To build and deploy your app to `gh-pages` branch on the GitHub repo:
-
-```bash
-yarn deploy
-```
